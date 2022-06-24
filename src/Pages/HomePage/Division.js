@@ -1,19 +1,19 @@
 import React from "react";
 
-const Division = ({ division, divisionName }) => {
+const Division = ({ division, divisionName, setHotelInDivision }) => {
   const divisionname = division.toLowerCase();
   const handleDivision = () => {
     fetch(`http://localhost:5000/hotels/${divisionname}`)
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => setHotelInDivision(data));
   };
   return (
     <div
-      class="card  bg-base-100 shadow-xl"
+      class="card  bg-base-100 shadow-xl pointer hover:btn"
       onClick={() => handleDivision(divisionName)}
     >
       <div class="card-body">
-        <h3 className="text-3xl">{division}</h3>
+        <h3 className="text-2xl">{division}</h3>
       </div>
     </div>
   );
