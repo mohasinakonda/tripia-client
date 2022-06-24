@@ -1,0 +1,147 @@
+[
+    {
+      "id": 1,
+      "hotelName": "Hotel Dhaka Garden Inn",
+      "description": "3 Star Hotel in Banani Dhaka Bangladesh. A boutique hotel offers business class \t\t\taccommodation with luxurious facilities. Room Types are Super Deluxe Double Room, Executive Suite, Super Deluxe Twin Room and Deluxe Single Room.",
+      "address": [
+        "House # 03, Road # 24",
+        "Block – K, Banani Model town",
+        "Dhaka -1213, Bangladesh",
+        "Phone : +880-2-9860808, +880-2-9857989",
+        "Website : www.hoteldhakagardeninn.com"
+      ],
+      "location": "dhaka",
+      "prices": [
+        "Deluxe King Room US$70 / BDT 5,492 (approx.)",
+        "Deluxe Twin Room US$85 / BDT 6,668 (approx.)",
+        "Executive Room US$95 / BDT 7,453 (approx.)",
+        "Family Suite US$135 / BDT 10,591 (approx.)"
+      ]
+    },
+    {
+      "id": 2,
+      "hotelName": "Rose View Hotel",
+      "description": "5 Luxurious five star hotel in Sylhet. Equipped with 140 rooms and suites, swimming pool, restaurants, business center Star Hotel in Banani Dhaka Bangladesh. A boutique hotel offers business class accommodation with luxurious facilities. Room Types are Super Deluxe Double Room, Executive Suite, Super Deluxe Twin Room and Deluxe Single Room.",
+      "address": [
+        "Plot # 2, Block #D",
+        "Shahjalal Uposhohor (Main Road)",
+        "Sylhet – 3100, Bangladesh.",
+        "Phone : +88 (0821) 721835, 721439, 720425-26",
+        "Mobile : +88 01972787878"
+      ],
+      "location": "syllet",
+      "prices": [
+        "Deluxe King Room US$70 / BDT 5,492 (approx.)",
+        "Deluxe Twin Room US$85 / BDT 6,668 (approx.)",
+        "Executive Room US$95 / BDT 7,453 (approx.)",
+        "Family Suite US$135 / BDT 10,591 (approx.)"
+      ]
+    },
+    {
+      "id": 3,
+      "hotelName": "Dusai Resort and Spa",
+      "description": "luxurious 5 star boutique Villa Resort & SpaDusai Resort and Spa is a luxurious 5 star standard boutique Villa Resort & Spa in Sylhet, Bangladesh.",
+      "address": [
+        "Moulvibazar Sadar",
+        "Dhaka – Moulvibazaar Highway, Bangladesh.",
+        "Phone : +880 86164100, +880 2 9880103-5",
+        "Reservation Phone : +880 1617005515/16"
+      ],
+      "location": "syllet",
+      "prices": [
+        "Deluxe King Room US$70 / BDT 5,492 (approx.)",
+        "Deluxe Twin Room US$85 / BDT 6,668 (approx.)",
+        "Executive Room US$95 / BDT 7,453 (approx.)",
+        "Family Suite US$135 / BDT 10,591 (approx.)"
+      ]
+    },
+    {
+      "id": 4,
+      "hotelName": "Long Beach Hotel",
+      "description": "l[Long Beach Hotel Cox’s Bazar is a modern and luxurious hotel situated in Cox’s Bazar.].",
+      "address": [
+        "4, Kalatoli Road, Hotel Motel Zone",
+        "Cox’s Bazar, Bangladesh.",
+        "Phone : +88 0341 51843-6",
+        "Cell : +88 01730 338907-9"
+      ],
+      "location": "Cox’s Bazar",
+      "prices": [
+        "Deluxe King Room US$70 / BDT 3,492 (approx.)",
+        "Deluxe Twin Room US$85 / BDT 4,668 (approx.)",
+        "Executive Room US$95 / BDT 5,453 (approx.)",
+        "Family Suite US$135 / BDT 10,591 (approx.)"
+      ]
+    },
+    {
+      "id": 5,
+      "hotelName": "Hotel 71",
+      "description": "3 Star Hotel in Dhaka Bangladesh.[Hotel 71 provides a boutique service with affordable price whether you are vacationing or visiting Dhaka as an expatriate or corporate traveler]",
+      "address": [
+        "176 Shaheed Syed Nazrul Islam Sarani",
+        "Dhaka, 1000, Bangladesh.",
+        "Phone : +88 02 8316598, +88 01750076933"
+      ],
+      "location": "dhaka",
+      "prices": [
+        "Deluxe King Room US$45 / BDT 3,492 (approx.)",
+        "Deluxe Twin Room US$52 / BDT 4,668 (approx.)",
+        "Executive Room US$64 / BDT 5,453 (approx.)",
+        "Family Suite US$135 / BDT 10,591 (approx.)"
+      ]
+    },
+    {
+      "id": 6,
+      "hotelName": "FARS Hotel & Resorts Ltd.",
+      "description": " Star hotel having 154 Rooms & Suites in Purana Palatan, Dhaka. Hotel in Dhaka near Motijheel. Facilities includes restaurant, spa, fitness center, conference center etc.",
+      "address": [
+        "212, Shahid Syed Nazrul Islam Sharani",
+        "Purana Palatan, Dhaka – 1000, Bangladesh.",
+        "Phone : +88 02 9515014",
+        "Website : www.farshotelbd.com"
+      ],
+      "location": "dhaka",
+      "prices": [
+        "Deluxe King Room US$70 / BDT 5,492 (approx.)",
+        "Deluxe Twin Room US$85 / BDT 6,668 (approx.)",
+        "Executive Room US$95 / BDT 7,453 (approx.)",
+        "Family Suite US$135 / BDT 10,591 (approx.)"
+      ]
+    },
+    {
+      "id": 7,
+      "hotelName": "hotel ornate",
+      "description": "3 star hotel, located at Bijoy Nagar, Dhaka. A concern of MIURA International (BD) Ltd. A Japan-Bangladesh Joint Venture hotel. Meeting & conference room for around 16 to 90 person and available for rent (shift basis). Convention hall can accommodate up to 350 guests.",
+      "address": [
+        "30, Bijoynagar, Dhaka 1000, Bangladesh.",
+        "Tel : 0088-02-9330219, 088-02-9354434",
+        "Fax : 0088-02-9334000",
+        "Email : ornate@dhaka.net",
+        "Web : www.hotelornate.netm"
+      ],
+      "location": "dhaka",
+      "prices": [
+        "Deluxe King Room US$70 / BDT 5,492 (approx.)",
+        "Deluxe Twin Room US$85 / BDT 6,668 (approx.)",
+        "Executive Room US$95 / BDT 7,453 (approx.)",
+        "Family Suite US$135 / BDT 10,591 (approx.)"
+      ]
+    },
+    {
+      "id": 8,
+      "hotelName": "Platinum Suites – Banani, Dhaka.",
+      "description": "3 star hotel, located at Bijoy Nagar, Dhaka. A concern of MIURA International (BD) Ltd. A Japan-Bangladesh Joint Venture hotel. Meeting & conference room for around 16 to 90 person and available for rent (shift basis). Convention hall can accommodate up to 350 guests.",
+      "address": [
+        "Plot No 58, Road No. 11, Block- F, Dhaka 1213, Bangladesh.",
+        "Phone : +880 2 55042355, +880 2 55042352, +880 2 55042353,+880 2 55042363, +880 2 55042395, +880 2 55042396",
+        "Mobile : +880 1922110994",
+        "Fax : +880 2 55042365",
+        "Website : platinumhotels.com.bd/platinum-suites"
+      ],
+      "location": "dhaka",
+      "prices": [
+        "Theme Suite $300++, Large Suite $250++",
+        "Regular Suite $200++, Studio Room $180++"
+      ]
+    }
+  ]
