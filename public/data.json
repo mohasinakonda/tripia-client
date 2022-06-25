@@ -29,7 +29,7 @@
         "Phone : +88 (0821) 721835, 721439, 720425-26",
         "Mobile : +88 01972787878"
       ],
-      "location": "syllet",
+      "location": "Sylhet",
       "prices": [
         "Deluxe King Room US$70 / BDT 5,492 (approx.)",
         "Deluxe Twin Room US$85 / BDT 6,668 (approx.)",
@@ -47,7 +47,7 @@
         "Phone : +880 86164100, +880 2 9880103-5",
         "Reservation Phone : +880 1617005515/16"
       ],
-      "location": "syllet",
+      "location": "Sylhet",
       "prices": [
         "Deluxe King Room US$70 / BDT 5,492 (approx.)",
         "Deluxe Twin Room US$85 / BDT 6,668 (approx.)",
@@ -66,6 +66,8 @@
         "Cell : +88 01730 338907-9"
       ],
       "location": "Cox’s Bazar",
+      "district":"Cox's Bazar",
+      "division":"Chittagong",
       "prices": [
         "Deluxe King Room US$70 / BDT 3,492 (approx.)",
         "Deluxe Twin Room US$85 / BDT 4,668 (approx.)",

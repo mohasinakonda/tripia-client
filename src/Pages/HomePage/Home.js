@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Outlet } from "react-router-dom";
+
 import Navbar from "../Shared/Navbar";
 import Banner from "./Banner";
 import Division from "./Division";
@@ -13,11 +13,11 @@ const Home = () => {
     "Dhaka",
     "Mymensingh",
     "Khulna",
-    "Syllet",
+    "Sylhet",
     "Rajshahi",
-    "Rongpur",
-    "Borishal",
-    "Chitagong",
+    "Rangpur",
+    "Barisal",
+    "Chittagong",
   ];
 
   const district = districts.map((district) => district.district);
@@ -46,7 +46,12 @@ const Home = () => {
           <div className="grid grid-cols-1">
             {totalDistrict.map((data) => (
               <label htmlFor="dhaka">
-                <input type="checkbox" name={data} id="" />
+                <input
+                  className="m-4 text-xl"
+                  type="checkbox"
+                  name={data}
+                  id=""
+                />
                 {data}
               </label>
             ))}
