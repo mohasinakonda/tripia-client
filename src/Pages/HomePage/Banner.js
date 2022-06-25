@@ -5,6 +5,7 @@ import { format } from "date-fns";
 import "react-day-picker/dist/style.css";
 import Hotels from "./Hotels";
 import Division from "./Division";
+import Navbar from "../Shared/Navbar";
 
 const Banner = ({ handleSomething }) => {
   const [selected, setSelected] = useState(new Date());
