@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-import Navbar from "../Shared/Navbar";
 import Banner from "./Banner";
 import Division from "./Division";
 import Dhaka from "./Divisions/Dhaka";
@@ -28,7 +27,6 @@ const Home = () => {
 
   return (
     <div>
-      <Navbar />
       <Banner />
       <div className="grid lg:grid-cols-8 md:grid-cols-4 sm:grid-cols-2  grid-cols-2 gap-2 justify-center pt-5  ">
         {divisions.map((division, i) => (

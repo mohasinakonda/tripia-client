@@ -21,15 +21,18 @@
     {
       "id": 2,
       "hotelName": "Rose View Hotel",
-      "description": "5 Luxurious five star hotel in Sylhet. Equipped with 140 rooms and suites, swimming pool, restaurants, business center Star Hotel in Banani Dhaka Bangladesh. A boutique hotel offers business class accommodation with luxurious facilities. Room Types are Super Deluxe Double Room, Executive Suite, Super Deluxe Twin Room and Deluxe Single Room.",
+      "description": "5 Luxurious five star hotel in sylhet. Equipped with 140 rooms and suites, swimming pool, restaurants, business center Star Hotel in Banani Dhaka Bangladesh. A boutique hotel offers business class accommodation with luxurious facilities. Room Types are Super Deluxe Double Room, Executive Suite, Super Deluxe Twin Room and Deluxe Single Room.",
       "address": [
         "Plot # 2, Block #D",
         "Shahjalal Uposhohor (Main Road)",
-        "Sylhet – 3100, Bangladesh.",
+        "sylhet – 3100, Bangladesh.",
         "Phone : +88 (0821) 721835, 721439, 720425-26",
         "Mobile : +88 01972787878"
       ],
-      "location": "Sylhet",
+      "location": "sylhet",
+      
+      "district":"moulobibazar",
+      "division":"sylhet",
       "prices": [
         "Deluxe King Room US$70 / BDT 5,492 (approx.)",
         "Deluxe Twin Room US$85 / BDT 6,668 (approx.)",
@@ -40,14 +43,17 @@
     {
       "id": 3,
       "hotelName": "Dusai Resort and Spa",
-      "description": "luxurious 5 star boutique Villa Resort & SpaDusai Resort and Spa is a luxurious 5 star standard boutique Villa Resort & Spa in Sylhet, Bangladesh.",
+      "description": "luxurious 5 star boutique Villa Resort & SpaDusai Resort and Spa is a luxurious 5 star standard boutique Villa Resort & Spa in sylhet, Bangladesh.",
       "address": [
         "Moulvibazar Sadar",
         "Dhaka – Moulvibazaar Highway, Bangladesh.",
         "Phone : +880 86164100, +880 2 9880103-5",
         "Reservation Phone : +880 1617005515/16"
       ],
-      "location": "Sylhet",
+      "location": "sylhet",
+      
+      "district":"moulobibazar",
+      "division":"sylhet",
       "prices": [
         "Deluxe King Room US$70 / BDT 5,492 (approx.)",
         "Deluxe Twin Room US$85 / BDT 6,668 (approx.)",
@@ -85,6 +91,8 @@
         "Phone : +88 02 8316598, +88 01750076933"
       ],
       "location": "dhaka",
+      "district":"dhaka",
+      "division":"dhaka",
       "prices": [
         "Deluxe King Room US$45 / BDT 3,492 (approx.)",
         "Deluxe Twin Room US$52 / BDT 4,668 (approx.)",
@@ -103,6 +111,9 @@
         "Website : www.farshotelbd.com"
       ],
       "location": "dhaka",
+      
+      "district":"dhaka",
+      "division":"dhaka",
       "prices": [
         "Deluxe King Room US$70 / BDT 5,492 (approx.)",
         "Deluxe Twin Room US$85 / BDT 6,668 (approx.)",
@@ -122,6 +133,9 @@
         "Web : www.hotelornate.netm"
       ],
       "location": "dhaka",
+     
+      "district":"gazipur",
+      "division":"dhaka",
       "prices": [
         "Deluxe King Room US$70 / BDT 5,492 (approx.)",
         "Deluxe Twin Room US$85 / BDT 6,668 (approx.)",
@@ -141,6 +155,8 @@
         "Website : platinumhotels.com.bd/platinum-suites"
       ],
       "location": "dhaka",
+      "district":"gazipur",
+      "division":"dhaka",
       "prices": [
         "Theme Suite $300++, Large Suite $250++",
         "Regular Suite $200++, Studio Room $180++"
