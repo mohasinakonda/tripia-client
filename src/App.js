@@ -10,6 +10,8 @@ import Profile from "./Pages/Dashboard/Profile";
 import AddRoom from "./Pages/Dashboard/AddRoom";
 import Customers from "./Pages/Dashboard/Customers";
 import Login from "./Pages/Shared/LoginRegister/Login";
+import Register from "./Pages/Shared/LoginRegister/Register";
+import LoginRegister from "./Pages/Shared/LoginRegister/LoginRegister";
 
 function App() {
   return (
@@ -17,7 +19,12 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="login" element={<Login />}></Route>
+
+        <Route path="login" element={<LoginRegister />}>
+          <Route index element={<Login />}></Route>
+
+          <Route path="/login/register" element={<Register />}></Route>
+        </Route>
 
         <Route path="dhaka" element={<Dhaka />}></Route>
         <Route path="dashboard" element={<Dashboard />}>
