@@ -62,12 +62,13 @@ const Home = () => {
       .then((res) => res.json())
       .then((data) => setHotelInDivision(data)); */
   };
-  console.log(upazila);
+
   return (
     <div>
       <Banner />
-      <div className="grid lg:grid-cols-8 md:grid-cols-4 sm:grid-cols-2  grid-cols-2 gap-2 justify-center pt-5  ">
-        <form className="flex gap-3">
+      <div className=" pt-5  ">
+        <h2 className="text-3xl py-4">Find your nearest hotel</h2>
+        <form className="flex gap-3  flex-wrap">
           <SelectLocation
             handleLocation={handleDivision}
             location={divisions}
@@ -84,32 +85,13 @@ const Home = () => {
             location={upazila}
             mood="upazila"
           />
-
-          <input type="submit" value="submit" />
         </form>
       </div>
-      <div className="flex">
-        <div className="flex-1 w-[30%]">
-          <h2 className="text-3xl ">Category</h2>
-          <div className="grid grid-cols-1">
-            {totalDistrict.map((data) => (
-              <label htmlFor={data}>
-                <input
-                  className="m-4 text-xl"
-                  type="checkbox"
-                  name={data}
-                  id=""
-                />
-                {data}
-              </label>
-            ))}
-          </div>
-        </div>
-        <div className="grid grid-cols-1 p-[80px] grow w-[60%] gap-20">
-          {hotelsInDivision.map((hotel) => (
-            <Dhaka key={hotel._id} hotel={hotel} />
-          ))}
-        </div>
+      <hr className="mt-2" />
+      <div className="grid grid-cols-1 p-16 gap-20">
+        {hotelsInDivision.map((hotel) => (
+          <Dhaka key={hotel._id} hotel={hotel} />
+        ))}
       </div>
     </div>
   );
