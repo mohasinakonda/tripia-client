@@ -5,9 +5,9 @@ const Dashboard = () => {
   return (
     <div class="drawer drawer-mobile">
       <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-      <div class="drawer-content flex flex-col ">
+      <div class="drawer-content flex flex-col px-16 ">
         {/* <!-- Page content here --> */}
-        <div>
+        <div className="sm:px-16">
           <label for="my-drawer-2" class="btn  lg:hidden">
             <span className="text-4xl"> &gt;</span>
           </label>
@@ -15,12 +15,6 @@ const Dashboard = () => {
         </div>
         <hr />
         <Outlet />
-        {/*  <label
-          for="my-drawer-2"
-          class="btn btn-primary drawer-button lg:hidden"
-        >
-          Open drawer
-        </label> */}
       </div>
       <div class="drawer-side">
         <label for="my-drawer-2" class="drawer-overlay"></label>
