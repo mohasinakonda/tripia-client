@@ -7,6 +7,10 @@ const AddRoom = () => {
   const [allLocations, setAllLocations] = useState([]);
   const [districts, setDistrict] = useState([]);
   const [upazila, setUpazila] = useState([]);
+  const [localUpazila, setLocalUpazila] = useState("");
+  const [localDistrict, setlocatlDistrict] = useState("");
+  const [localDivision, setlocalDivision] = useState("");
+
   ////////////////////////////
   useEffect(() => {
     fetch("http://localhost:5000/location")
@@ -15,53 +19,39 @@ const AddRoom = () => {
   }, []);
   let divisions = allLocations.map((data) => data.division);
   divisions = [...new Set(divisions)];
-  console.log(divisions);
 
   const handleDivision = (event) => {
     const DivisionName = event.target.value;
+    setlocalDivision(DivisionName);
+    const divisionWithDistrict = allLocations.filter(
+      (info) => info.division === DivisionName
+    );
+    const district = divisionWithDistrict.map((district) => district.district);
+    const totalDistrict = [...new Set(district)];
 
-    fetch("http://localhost:5000/location")
-      .then((res) => res.json())
-      .then((data) => {
-        const divisionWithDistrict = data.filter(
-          (info) => info.division === DivisionName
-        );
-        const district = divisionWithDistrict.map(
-          (district) => district.district
-        );
-
-        const totalDistrict = [...new Set(district)];
-        console.log(totalDistrict);
-
-        setDistrict(totalDistrict);
-      });
+    setDistrict(totalDistrict);
   };
 
   const handleDistrict = (event) => {
     const district = event.target.value;
+    setlocatlDistrict(district);
 
-    fetch("http://localhost:5000/location")
-      .then((res) => res.json())
-      .then((data) => {
-        const districtWithUpazila = data.filter(
-          (info) => info.district === district
-        );
-        const upaliza = districtWithUpazila?.map((data) => data.upazila);
-        console.log(upaliza);
-        setUpazila(upaliza);
-      });
+    const districtWithUpazila = allLocations.filter(
+      (info) => info.district === district
+    );
+    const upaliza = districtWithUpazila?.map((data) => data.upazila);
+    console.log(upaliza);
+    setUpazila(upaliza);
   };
   const handleUpazila = (event) => {
-    console.log(event.target.value);
+    const upaliza = event.target.value;
+    setLocalUpazila(upaliza);
   };
   const handleHotels = (event) => {
     event.preventDefault();
     const hotelName = event.target.hotelName.value;
     const images = event.target.images.value;
 
-    const division = event.target.division.value.toLowerCase();
-    const district = event.target.district.value.toLowerCase();
-    const upazila = event.target.upazila.value.toLowerCase();
     const address = event.target.address.value;
     const ratings = event.target.ratings.value;
     const price = event.target.price.value;
@@ -72,9 +62,9 @@ const AddRoom = () => {
     const hotelInformation = {
       hotelName,
       image,
-      division,
-      district,
-      upazila,
+      localDivision,
+      localDistrict,
+      localUpazila,
       addresses,
       ratings,
       price,
