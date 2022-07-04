@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
+import { toast } from "react-toastify";
+import useLocation from "../../locationHooks/useLocation";
 import SelectLocation from "../HomePage/SelectLocation";
 import Input from "./AddRoomsAssests/Input";
 
 const AddRoom = () => {
-  const [allLocations, setAllLocations] = useState([]);
+  const [allLocations, setAllLocations] = useLocation([]);
   const [districts, setDistrict] = useState([]);
   const [upazila, setUpazila] = useState([]);
   const [localUpazila, setLocalUpazila] = useState("");
@@ -12,11 +14,7 @@ const AddRoom = () => {
   const [localDivision, setlocalDivision] = useState("");
 
   ////////////////////////////
-  useEffect(() => {
-    fetch("http://localhost:5000/location")
-      .then((res) => res.json())
-      .then((data) => setAllLocations(data));
-  }, []);
+
   let divisions = allLocations.map((data) => data.division);
   divisions = [...new Set(divisions)];
 
@@ -40,9 +38,10 @@ const AddRoom = () => {
       (info) => info.district === district
     );
     const upaliza = districtWithUpazila?.map((data) => data.upazila);
-    console.log(upaliza);
+
     setUpazila(upaliza);
   };
+
   const handleUpazila = (event) => {
     const upaliza = event.target.value;
     setLocalUpazila(upaliza);
@@ -79,7 +78,14 @@ const AddRoom = () => {
       body: JSON.stringify(hotelInformation),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        if (data.insertedId) {
+          event.reset();
+          toast.success("Product added successfully");
+        } else {
+          console.log(data);
+        }
+      });
   };
   return (
     <div>
@@ -95,13 +101,11 @@ const AddRoom = () => {
             name="images"
             placeholder="images"
             className="input input-bordered text-lg"
+            required
           ></textarea>
         </label>
         {/* ===============locations============== */}
         <div className="grid lg:grid-cols-3 grid-cols-1 gap-3 my-3">
-          {/* <Input name="division" />
-          <Input name="district" />
-          <Input name="upazila" /> */}
           <SelectLocation
             handleLocation={handleDivision}
             location={divisions}
@@ -121,6 +125,7 @@ const AddRoom = () => {
         <label class="input-group input-group-vertical">
           <span className="text-xl">address</span>
           <textarea
+            required
             name="address"
             placeholder="address"
             className="input input-bordered text-lg"
@@ -142,6 +147,7 @@ const AddRoom = () => {
         <label class="input-group input-group-vertical my-3">
           <span className="text-xl">Descriptions</span>
           <textarea
+            required
             name="description"
             placeholder="description of the hotel"
             className="input input-bordered text-lg"

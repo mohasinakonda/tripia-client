@@ -23,14 +23,6 @@ const Division = ({
       });
   };
   return (
-    /*  <div
-      class="card  bg-base-100 shadow-xl pointer hover:btn"
-      onClick={() => handleDivision(divisionName)}
-    >
-      <div class="card-body">
-        <h3 className="text-2xl">{division}</h3>
-      </div>
-    </div> */
     <form>
       <select name="division" id="">
         <option value={division}>{division}</option>

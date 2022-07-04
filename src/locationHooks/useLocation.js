@@ -1,38 +1,15 @@
 import React from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 
-const useUpazila = ({ districts }) => {
-  const [upaliza, setUpazila] = useState([]);
-  fetch("division.json")
-    .then((res) => res.json())
-    .then((data) => {
-      const districtWithUpazila = data.filter(
-        (info) => info.district === districts
-      );
-      const upaliza = districtWithUpazila?.map((data) => data.upazila);
-
-      setUpazila(upaliza);
-    });
-  return [upaliza];
+const useLocation = () => {
+  const [allLocations, setAllLocations] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/location")
+      .then((res) => res.json())
+      .then((data) => setAllLocations(data));
+  }, []);
+  return [allLocations];
 };
 
-const useDistrict = ({ DivisionName }) => {
-  const [district, setDistrict] = useState([]);
-  fetch("division.json")
-    .then((res) => res.json())
-    .then((data) => {
-      const divisionWithDistrict = data.filter(
-        (info) => info.division === DivisionName
-      );
-      const district = divisionWithDistrict.map(
-        (district) => district.district
-      );
-
-      const totalDistrict = [...new Set(district)];
-
-      setDistrict(totalDistrict);
-    });
-  return [district];
-};
-
-export { useUpazila, useDistrict };
+export default useLocation;
