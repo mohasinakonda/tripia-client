@@ -12,6 +12,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Hotels from "./Pages/HomePage/Divisions/Hotels";
 import Details from "./Pages/HotelsDetails/Details";
+import Partner from "./Pages/PartnerPrograms/Partner";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />}></Route>
+        <Route path="partner-program" element={<Partner />} />
         <Route path="hotels/:hotelID" element={<Details />} />
         <Route path="login" element={<LoginRegister />}>
           <Route index element={<Login />}></Route>
