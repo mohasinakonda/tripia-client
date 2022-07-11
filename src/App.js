@@ -11,6 +11,7 @@ import LoginRegister from "./Pages/Shared/LoginRegister/LoginRegister";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Hotels from "./Pages/HomePage/Divisions/Hotels";
+import Details from "./Pages/HotelsDetails/Details";
 
 function App() {
   return (
@@ -18,14 +19,13 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />}></Route>
-
+        <Route path="hotels/:hotelID" element={<Details />} />
         <Route path="login" element={<LoginRegister />}>
           <Route index element={<Login />}></Route>
 
           <Route path="/login/register" element={<Register />}></Route>
         </Route>
 
-        {/* <Route path="dhaka" element={<Dhaka />}></Route> */}
         <Route path="hotels" element={Hotels} />
         <Route path="dashboard" element={<Dashboard />}>
           <Route index element={<Profile />}></Route>

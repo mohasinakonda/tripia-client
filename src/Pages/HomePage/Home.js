@@ -2,10 +2,7 @@ import React, { useState } from "react";
 import FindLocation from "../Shared/FindLocation";
 
 import Banner from "./Banner";
-// import Division from "./Division";
 import Hotels from "./Divisions/Hotels";
-// import Hotels from "./Hotels";
-// import SelectLocation from "./SelectLocation";
 
 const Home = () => {
   const [hotelsInDivision, setHotelInDivision] = useState([]);

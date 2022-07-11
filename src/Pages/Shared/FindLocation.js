@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 import useLocation, { useDistrict } from "../../locationHooks/useLocation";
 import SelectLocation from "../HomePage/SelectLocation";
 
@@ -6,16 +7,22 @@ const FindLocation = ({ setHotelInDivision }) => {
   const [districts, setDistrict] = useState([]);
   const [upazila, setUpazila] = useState([]);
   const [allLocations] = useLocation();
+  const [cityName, setCityName] = useState("");
+  useEffect(() => {
+    fetch(`http://localhost:5000/hotels/${cityName}`)
+      .then((res) => res.json())
+      .then((data) => setHotelInDivision(data));
+  }, [cityName, setHotelInDivision]);
 
+  console.log(cityName);
   // divisions
   let divisions = allLocations.map((data) => data.division);
   divisions = [...new Set(divisions)];
-
+  //=================handle division===============
   const handleDivision = (event) => {
     const DivisionName = event.target.value;
-    fetch(`http://localhost:5000/hotels/${DivisionName}`)
-      .then((res) => res.json())
-      .then((data) => setHotelInDivision(data));
+    // setCityName(DivisionName);
+
     const divisionWithDistrict = allLocations.filter(
       (info) => info.division === DivisionName
     );
@@ -24,12 +31,10 @@ const FindLocation = ({ setHotelInDivision }) => {
 
     setDistrict(totalDistrict);
   };
-  // handle district
+  // ===============handle district==============
   const handleDistrict = (event) => {
     const district = event.target.value;
-    fetch(`http://localhost:5000/hotels/${district}`)
-      .then((res) => res.json())
-      .then((data) => setHotelInDivision(data));
+    // setCityName(district);
     const districtWithUpazila = allLocations.filter(
       (info) => info.district === district
     );
@@ -37,12 +42,13 @@ const FindLocation = ({ setHotelInDivision }) => {
 
     setUpazila(upaliza);
   };
-
+  //===============handle upazila==================
   const handleUpazila = (event) => {
     let cityName = event.target.value;
-    fetch(`http://localhost:5000/hotels/${cityName}`)
+    setCityName(cityName);
+    /* fetch(`http://localhost:5000/hotels/${cityName}`)
       .then((res) => res.json())
-      .then((data) => setHotelInDivision(data));
+      .then((data) => setHotelInDivision(data)); */
   };
 
   return (

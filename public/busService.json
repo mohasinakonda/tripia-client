@@ -1,0 +1,56 @@
+[
+    {
+        "busName":"Ena transportation",
+        "condition":"Non AC",
+        "coverage":["Mymensingh","Trishal","Bhaloka","Gazipur","Dhaka"],
+        "ticket_counter":["Mashkanda","Mohakhali"],
+        "road":"dhaka-mymensingh"
+
+        
+    },
+    {
+        "busName":"Shamoly poribohon",
+        "condition":"Non AC",
+        "coverage":["Halowaghat","Mymensingh","Trishal","Bhaloka","Gazipur","Dhaka"],
+        "ticket_counter":["halowaghat","Mohakhali"],
+        "road":"dhaka-mymensingh"
+        
+        
+    },
+    {
+        "busName":"islam poribohon",
+        "condition":"Non AC",
+        "coverage":["Moktagacha","Mymensingh","Trishal","Bhaloka","Gazipur","Dhaka"],
+        "ticket_counter":["Moktagacha","Mohakhali"],
+        "road":"dhaka-mymensingh"
+        
+        
+    },
+    {
+        "busName":"Alom asia",
+        "condition":"Non AC",
+        "coverage":["Folbaria","Mymensingh","Trishal","Bhaloka","Gazipur","Dhaka"],
+        "ticket_counter":["folbaria","Mohakhali"],
+        "road":"dhaka-mymensingh"
+        
+        
+    },
+    {
+        "busName":"Razib poribohon",
+        "condition":"Non AC",
+        "coverage":["Jamalpur","Mymensingh","Trishal","Bhaloka","Gazipur","Dhaka"],
+        "ticket_counter":["Jamalpur","Mohakhali"],
+        "road":"dhaka-mymensingh"
+        
+        
+    },
+    {
+        "busName":"shah jalal enterprise",
+        "condition":"Non AC",
+        "coverage":["Netrokona","Mymensingh","Trishal","Bhaloka","Gazipur","Dhaka"],
+        "ticket_counter":["Netrokona","Mohakhali"],
+        "road":"dhaka-mymensingh"
+        
+        
+    }
+]

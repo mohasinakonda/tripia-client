@@ -1,9 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Hotels = ({ hotel }) => {
-  const { hotelName, image, price, description, address, ratings } = hotel;
+  const { _id, hotelName, image, price, description, address, ratings } = hotel;
   const fullDescription = description.split("\n");
-
+  const navigate = useNavigate();
+  const handleHotels = (id) => {
+    navigate(`/hotels/${id}`);
+  };
   return (
     <div class="flex lg:card-side bg-base-100 shadow-xl p-30 ">
       <figure>
@@ -25,7 +29,9 @@ const Hotels = ({ hotel }) => {
           Hotel Ratings &rArr; {ratings} stars
         </p>
         <div class="card-actions justify-end">
-          <button class="btn btn-primary">Details</button>
+          <button onClick={() => handleHotels(_id)} class="btn btn-primary">
+            Details
+          </button>
         </div>
       </div>
     </div>
