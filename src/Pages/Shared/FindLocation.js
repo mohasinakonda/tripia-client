@@ -8,6 +8,7 @@ const FindLocation = ({ setHotelInDivision }) => {
   const [upazila, setUpazila] = useState([]);
   const [allLocations] = useLocation();
   const [cityName, setCityName] = useState("");
+  // const [random,setRandom]=useState(0)
   useEffect(() => {
     fetch(`http://localhost:5000/hotels/${cityName}`)
       .then((res) => res.json())
@@ -46,9 +47,6 @@ const FindLocation = ({ setHotelInDivision }) => {
   const handleUpazila = (event) => {
     let cityName = event.target.value;
     setCityName(cityName);
-    /* fetch(`http://localhost:5000/hotels/${cityName}`)
-      .then((res) => res.json())
-      .then((data) => setHotelInDivision(data)); */
   };
 
   return (
