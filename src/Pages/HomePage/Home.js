@@ -6,6 +6,7 @@ import Hotels from "./Divisions/Hotels";
 
 const Home = () => {
   const [hotelsInDivision, setHotelInDivision] = useState([]);
+  console.log(hotelsInDivision);
 
   return (
     <div>

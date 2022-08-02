@@ -15,7 +15,6 @@ const FindLocation = ({ setHotelInDivision }) => {
       .then((data) => setHotelInDivision(data));
   }, [cityName, setHotelInDivision]);
 
-  console.log(cityName);
   // divisions
   let divisions = allLocations.map((data) => data.division);
   divisions = [...new Set(divisions)];

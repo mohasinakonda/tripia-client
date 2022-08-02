@@ -1,9 +1,12 @@
 import React from "react";
+import Carousel from "react-grid-carousel";
 import { useNavigate } from "react-router-dom";
+import ArrowButton from "../../Shared/ArrowBtn";
 
 const Hotels = ({ hotel }) => {
   const { _id, hotelName, image, price, description, addresses, ratings } =
     hotel;
+
   const fullDescription = description.split("\n");
   const navigate = useNavigate();
   const handleHotels = (id) => {
@@ -13,9 +16,10 @@ const Hotels = ({ hotel }) => {
     const random = Math.floor(Math.random() * image?.length);
     return random;
   };
+  // console.log(hotel);
 
   return (
-    <div class="flex lg:card-side bg-base-100 shadow-xl p-5 ">
+    /*  <div class="flex lg:card-side bg-base-100 shadow-xl p-5 ">
       <figure>
         <img src={image[randomImage() || 0]} alt="Album" />
       </figure>
@@ -56,7 +60,39 @@ const Hotels = ({ hotel }) => {
           </div>
         </div>
       </div>
-    </div>
+    </div> */
+    <Carousel
+      cols={4}
+      rows={1}
+      gap={11}
+      responsiveLayout={[
+        {
+          breakpoint: 1200,
+          cols: 3,
+        },
+        {
+          breakpoint: 990,
+          cols: 2,
+        },
+      ]}
+      mobileBreakpoint={670}
+      arrowRight={<ArrowButton type="right" />}
+      arrowLeft={<ArrowButton type="left" />}
+    >
+      {[...Array(hotel.length)].map((_, i) => (
+        <Carousel.Item key={i}>
+          <div className="cursor-pointer" onClick={() => handleHotels(_id)}>
+            <img src={image[randomImage() || 0]} alt="" />
+            <h2 className="text-3xl uppercase">{hotelName}</h2>
+            <p></p>
+            <p>★★★★★</p>
+            <p className="font-bold">
+              PRICE <span>{price} BDT</span>
+            </p>
+          </div>
+        </Carousel.Item>
+      ))}
+    </Carousel>
   );
 };
 
