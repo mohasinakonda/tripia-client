@@ -3,10 +3,10 @@ import Carousel from "react-grid-carousel";
 import { useNavigate } from "react-router-dom";
 import ArrowButton from "../../Shared/ArrowBtn";
 
-const Hotels = ({ hotel }) => {
+const Hotels = ({ hotel, setHotelInDivision }) => {
   const { _id, hotelName, image, price, description, addresses, ratings } =
     hotel;
-
+  console.log(hotel);
   const fullDescription = description.split("\n");
   const navigate = useNavigate();
   const handleHotels = (id) => {
@@ -60,39 +60,20 @@ const Hotels = ({ hotel }) => {
           </div>
         </div>
       </div>
-    </div> */
-    <Carousel
-      cols={4}
-      rows={1}
-      gap={11}
-      responsiveLayout={[
-        {
-          breakpoint: 1200,
-          cols: 3,
-        },
-        {
-          breakpoint: 990,
-          cols: 2,
-        },
-      ]}
-      mobileBreakpoint={670}
-      arrowRight={<ArrowButton type="right" />}
-      arrowLeft={<ArrowButton type="left" />}
+    </div>  */
+
+    <div
+      className="cursor-pointer shadow-xl p-5"
+      onClick={() => handleHotels(_id)}
     >
-      {[...Array(hotel.length)].map((_, i) => (
-        <Carousel.Item key={i}>
-          <div className="cursor-pointer" onClick={() => handleHotels(_id)}>
-            <img src={image[randomImage() || 0]} alt="" />
-            <h2 className="text-3xl uppercase">{hotelName}</h2>
-            <p></p>
-            <p>★★★★★</p>
-            <p className="font-bold">
-              PRICE <span>{price} BDT</span>
-            </p>
-          </div>
-        </Carousel.Item>
-      ))}
-    </Carousel>
+      <img src={image[randomImage() || 0]} alt="" />
+      <h2 className="text-3xl uppercase">{hotelName}</h2>
+      <p></p>
+      <p>★★★★★</p>
+      <p className="font-bold">
+        PRICE <span>{price} BDT</span>
+      </p>
+    </div>
   );
 };
 

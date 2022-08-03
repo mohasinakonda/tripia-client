@@ -42,7 +42,7 @@ const Button = styled.span`
     left: 50%;
     transform: ${({ type }) =>
       type === "prev"
-        ? "translate(-25%, -50%) rotate(-135deg)"
+        ? "translate(-25%, -50%) rotate(135deg)"
         : "translate(-75%, -50%) rotate(45deg)"};
   }
 `;

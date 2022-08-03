@@ -12,7 +12,9 @@ const FindLocation = ({ setHotelInDivision }) => {
   useEffect(() => {
     fetch(`http://localhost:5000/hotels/${cityName}`)
       .then((res) => res.json())
-      .then((data) => setHotelInDivision(data));
+      .then((data) => {
+        setHotelInDivision(data);
+      });
   }, [cityName, setHotelInDivision]);
 
   // divisions

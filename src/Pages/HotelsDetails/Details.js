@@ -12,7 +12,7 @@ const Details = () => {
       .then((res) => res.json())
       .then((data) => setHotel(data));
   }, [hotelID]);
-  console.log(hotel);
+
   return (
     <div class="carousel w-full">
       <Carousel cols={2} rows={1} gap={10} loop>

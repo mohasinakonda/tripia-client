@@ -22,6 +22,7 @@ function App() {
         <Route path="/" element={<Home />}></Route>
         <Route path="partner-program" element={<Partner />} />
         <Route path="hotels/:hotelID" element={<Details />} />
+
         <Route path="login" element={<LoginRegister />}>
           <Route index element={<Login />}></Route>
 
