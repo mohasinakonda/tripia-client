@@ -13,6 +13,9 @@ import "react-toastify/dist/ReactToastify.css";
 import Hotels from "./Pages/HomePage/Divisions/Hotels";
 import Details from "./Pages/HotelsDetails/Details";
 import Partner from "./Pages/PartnerPrograms/Partner";
+import HotelListing from "./Pages/PartnerPrograms/HotelListing";
+import BusListing from "./Pages/PartnerPrograms/BusListing";
+import BecomeGuide from "./Pages/PartnerPrograms/BecomeGuide";
 
 function App() {
   return (
@@ -20,7 +23,12 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="partner-program" element={<Partner />} />
+        <Route path="partner" element={<Partner />}>
+          <Route index element={<HotelListing />} />
+          <Route path="/partner/hotel-listing" element={<HotelListing />} />
+          <Route path="/partner/bus-listing" element={<BusListing />} />
+          <Route path="/partner/become-guide" element={<BecomeGuide />} />
+        </Route>
         <Route path="hotels/:hotelID" element={<Details />} />
 
         <Route path="login" element={<LoginRegister />}>

@@ -12,7 +12,7 @@ const Navbar = () => {
       <div class="flex-none">
         <ul class="menu menu-horizontal p-0">
           <li>
-            <Link to="/partner-program" className="btn btn-success">
+            <Link to="/partner" className="btn btn-success">
               Become a partner
             </Link>
           </li>
