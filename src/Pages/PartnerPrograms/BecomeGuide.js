@@ -7,9 +7,30 @@ const BecomeGuide = () => {
   const [localUpazila, setLocalUpazila] = useState("");
   const [localDistrict, setlocatlDistrict] = useState("");
   const [localDivision, setlocalDivision] = useState("");
+  const handleGuide = (event) => {
+    event.preventDefault();
+    const name = event.target.name.value;
+    const email = event.target.email.value;
+    const birthDate = event.target.date.value;
+    const address = event.target.address.value;
+    const phone = event.target.phone.value;
+    const contactTime = event.target.contact.value;
+    const summery = event.target.summery.value;
+    const guideInfo = {
+      name,
+      email,
+      birthDate,
+      address,
+      phone,
+      contactTime,
+      summery,
+      location: [localDivision, localDistrict, localUpazila],
+    };
+    console.log(guideInfo);
+  };
   return (
-    <div>
-      <form>
+    <div className="">
+      <form onSubmit={handleGuide}>
         <Input
           type="text"
           name="name"
@@ -52,6 +73,18 @@ const BecomeGuide = () => {
           placeholder="Enter your contact time"
           label="Enter your best contact timing"
         />
+        <label class="input-group input-group-vertical">
+          <span className="text-xl">
+            We will only consider applications submitted in English.
+          </span>
+          <textarea
+            required
+            name="summery"
+            placeholder="Tell us why we hire for local guide"
+            className="input input-bordered text-lg"
+          ></textarea>
+        </label>
+        <button className="submit btn">Apply</button>
       </form>
     </div>
   );
