@@ -1,51 +1,15 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import { toast } from "react-toastify";
-import useLocation from "../../locationHooks/useLocation";
-import SelectLocation from "../HomePage/SelectLocation";
+
+import Locations from "../Shared/Locations";
 import Input from "./AddRoomsAssests/Input";
 
 const AddRoom = () => {
-  const [allLocations, setAllLocations] = useLocation([]);
-  const [districts, setDistrict] = useState([]);
-  const [upazila, setUpazila] = useState([]);
   const [localUpazila, setLocalUpazila] = useState("");
   const [localDistrict, setlocatlDistrict] = useState("");
   const [localDivision, setlocalDivision] = useState("");
 
-  ////////////////////////////
-
-  let divisions = allLocations.map((data) => data.division);
-  divisions = [...new Set(divisions)];
-
-  const handleDivision = (event) => {
-    const DivisionName = event.target.value;
-    setlocalDivision(DivisionName);
-    const divisionWithDistrict = allLocations.filter(
-      (info) => info.division === DivisionName
-    );
-    const district = divisionWithDistrict.map((district) => district.district);
-    const totalDistrict = [...new Set(district)];
-
-    setDistrict(totalDistrict);
-  };
-
-  const handleDistrict = (event) => {
-    const district = event.target.value;
-    setlocatlDistrict(district);
-
-    const districtWithUpazila = allLocations.filter(
-      (info) => info.district === district
-    );
-    const upaliza = districtWithUpazila?.map((data) => data.upazila);
-
-    setUpazila(upaliza);
-  };
-
-  const handleUpazila = (event) => {
-    const upaliza = event.target.value;
-    setLocalUpazila(upaliza);
-  };
   const handleHotels = (event) => {
     event.preventDefault();
     const hotelName = event.target.hotelName.value;
@@ -91,7 +55,11 @@ const AddRoom = () => {
     <div>
       <h3 className="text-3xl py-5">Add room here</h3>
       <form className="form-control" onSubmit={handleHotels}>
-        <Input name="hotelName" />
+        <Input
+          name="hotelName"
+          placeholder="Enter your hotel name"
+          label="Enter Hotel name"
+        />
 
         <label class="input-group input-group-vertical my-3">
           <span className="text-xl">
@@ -99,35 +67,24 @@ const AddRoom = () => {
           </span>
           <textarea
             name="images"
-            placeholder="images"
+            placeholder="Enter images urls"
             className="input input-bordered text-lg"
             required
           ></textarea>
         </label>
         {/* ===============locations============== */}
-        <div className="grid lg:grid-cols-3 grid-cols-1 gap-3 my-3">
-          <SelectLocation
-            handleLocation={handleDivision}
-            location={divisions}
-            mood="division"
-          />
-          <SelectLocation
-            handleLocation={handleDistrict}
-            location={districts}
-            mood="district"
-          />
-          <SelectLocation
-            handleLocation={handleUpazila}
-            location={upazila}
-            mood="upazila"
-          />
-        </div>
+
+        <Locations
+          setLocalUpazila={setLocalUpazila}
+          setlocalDivision={setlocalDivision}
+          setlocatlDistrict={setlocatlDistrict}
+        />
         <label class="input-group input-group-vertical">
-          <span className="text-xl">address</span>
+          <span className="text-xl">Address</span>
           <textarea
             required
             name="address"
-            placeholder="address"
+            placeholder="Enter address"
             className="input input-bordered text-lg"
           ></textarea>
         </label>
@@ -135,7 +92,7 @@ const AddRoom = () => {
         <label class="input-group input-group-vertical my-3">
           <span className="text-xl">Ratings</span>
           <select name="ratings" className="input input-bordered text-lg">
-            <option> ratings</option>
+            <option> Ratings</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -143,7 +100,12 @@ const AddRoom = () => {
             <option value="4">5</option>
           </select>
         </label>
-        <Input type="number" name="price" />
+        <Input
+          type="number"
+          name="price"
+          placeholder="Enter Price"
+          label="Enter price"
+        />
         <label class="input-group input-group-vertical my-3">
           <span className="text-xl">Descriptions</span>
           <textarea

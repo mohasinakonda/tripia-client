@@ -1,13 +1,13 @@
 import React from "react";
 
-const Input = ({ name, type }) => {
+const Input = ({ label, name, type, placeholder }) => {
   return (
     <label class="input-group input-group-vertical">
-      <span className="text-xl">{name}</span>
+      <span className="text-xl">{label}</span>
       <input
         type={type}
         name={name}
-        placeholder={name}
+        placeholder={placeholder}
         class="input input-bordered text-lg"
       />
     </label>

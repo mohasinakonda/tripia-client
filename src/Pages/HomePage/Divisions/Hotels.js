@@ -6,7 +6,7 @@ import ArrowButton from "../../Shared/ArrowBtn";
 const Hotels = ({ hotel, setHotelInDivision }) => {
   const { _id, hotelName, image, price, description, addresses, ratings } =
     hotel;
-  console.log(hotel);
+
   const fullDescription = description.split("\n");
   const navigate = useNavigate();
   const handleHotels = (id) => {
